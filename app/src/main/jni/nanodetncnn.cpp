@@ -112,7 +112,7 @@ static int draw_fps(cv::Mat& rgb)
 
 static NanoDet* g_nanodet = 0;
 static ncnn::Mutex lock;
-
+std::vector<Object> objs;
 class MyNdkCamera : public NdkCameraWindow
 {
 public:
@@ -129,7 +129,7 @@ void MyNdkCamera::on_image_render(cv::Mat& rgb) const
         {
             std::vector<Object> objects;
             g_nanodet->detect(rgb, objects);
-
+            objs=objects;
             g_nanodet->draw(rgb, objects);
         }
         else
@@ -284,5 +284,41 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_nanodetncnn_NanoDetNcnn_setOutputWin
 
     return JNI_TRUE;
 }
+
+}
+
+
+extern "C"
+JNIEXPORT jintArray JNICALL
+Java_com_tencent_nanodetncnn_NanoDetNcnn_getObjInfo(JNIEnv *env, jobject thiz, jint label,
+                                                    jint len) {
+    // TODO: implement getObjInfo()
+    jintArray jarr = env->NewIntArray(len);
+    //2.获取数组指针
+    jint *arr = env->GetIntArrayElements(jarr, NULL);
+    int max=-1;
+    int maxprob=0;
+    for(int i=0;i<objs.size();i++){
+        if(objs[i].label==label&&objs[i].prob>=maxprob){
+            max=i;
+            maxprob=objs[i].prob;
+        }
+    }
+    if(max>=0){
+        arr[0]=objs[max].rect.x;
+        arr[1]=objs[max].rect.y;
+        arr[2]=objs[max].rect.height;
+        arr[3]=objs[max].rect.width;
+
+    }else{
+        arr[0]=-1;
+    }
+
+    //4.释放资源
+    env->ReleaseIntArrayElements(jarr, arr, 0);
+    //5.返回数组
+    return jarr;
+//    return reinterpret_cast<jintArray>(heights);
+
 
 }

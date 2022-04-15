@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
+
 
     <LinearLayout
         android:orientation="horizontal"
@@ -14,6 +17,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="切换摄像头" />
+    <Button
+        android:id="@+id/buttonobjinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="得到高度"/>
+    <Button
+        android:id="@+id/menu_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接蓝牙"/>
+
+    <TextView
+        android:id="@+id/objText"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        />
 
     </LinearLayout>
 
@@ -37,6 +56,12 @@
         android:entries="@array/cpugpu_array" />
 
     </LinearLayout>
+
+<!--    <item-->
+<!--        android:id="@+id/menu_connect"-->
+<!--        android:icon="@drawable/device_access_bluetooth"-->
+<!--        android:title="@string/connect"-->
+<!--        app:showAsAction="ifRoom|withText" />-->
 
     <SurfaceView
         android:id="@+id/cameraview"

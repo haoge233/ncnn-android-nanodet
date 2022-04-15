@@ -23,6 +23,7 @@ public class NanoDetNcnn
     public native boolean openCamera(int facing);
     public native boolean closeCamera();
     public native boolean setOutputWindow(Surface surface);
+    public native int[] getObjInfo(int label,int len);
 
     static {
         System.loadLibrary("nanodetncnn");

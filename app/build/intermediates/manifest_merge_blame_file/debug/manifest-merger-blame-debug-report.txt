@@ -1,0 +1,61 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tencent.nanodetncnn"
+4    android:versionCode="1"
+5    android:versionName="1.1" >
+6
+7    <uses-sdk android:minSdkVersion="28" />
+7-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.BLUETOOTH" />
+9-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:7:5-68
+9-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:7:22-65
+10    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+10-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:8:5-74
+10-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:8:22-71
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:9:5-65
+11-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:9:22-62
+12
+13    <uses-feature android:name="android.hardware.camera2.full" />
+13-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:10:5-66
+13-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:10:19-63
+14
+15    <application
+15-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:12:5-26:19
+16        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+16-->[com.android.support:support-compat:28.0.0] C:\Users\Haoge\.gradle\caches\transforms-2\files-2.1\dd1cf78f22bdd94f550130b281f27c97\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+17        android:debuggable="true"
+18        android:label="@string/app_name"
+18-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:12:18-50
+19        android:testOnly="true" >
+20        <activity
+20-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:13:9-20:20
+21            android:name="com.tencent.nanodetncnn.MainActivity"
+21-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:13:19-46
+22            android:label="@string/app_name"
+22-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:14:19-51
+23            android:screenOrientation="portrait" >
+23-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:15:19-55
+24            <intent-filter>
+24-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:16:13-19:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:17:17-69
+25-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:17:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:18:17-77
+27-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:18:27-74
+28            </intent-filter>
+29        </activity>
+30        <activity
+30-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:22:9-25:59
+31            android:name="com.tencent.nanodetncnn.DeviceListActivity"
+31-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:23:13-47
+32            android:label="@string/select_device"
+32-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:24:13-50
+33            android:theme="@android:style/Theme.Dialog" />
+33-->D:\Android\AndroidStudioProjects\ncnn-android-nanodet\app\src\main\AndroidManifest.xml:25:13-56
+34    </application>
+35
+36</manifest>
